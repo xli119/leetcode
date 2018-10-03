@@ -11,6 +11,14 @@ class ListNode:
         self.val = x
         self.next = None
 
+    def __str__(self):
+        return str(self.val)
+
+
+def print_list(l1):
+    while(l1):
+        print(l1)
+        l1 = l1.next
 
 
 def add_two_numbers(l1, l2):
@@ -36,7 +44,7 @@ l1.next.next = ListNode(3)
 l2 = ListNode(5)
 l2.next = ListNode(6)
 l2.next.next = ListNode(4)
+print_list(add_two_numbers(l1, l2))
 
-print(add_two_numbers(l1, l2).next.next.val)
 
 
