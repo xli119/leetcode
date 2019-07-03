@@ -14,6 +14,7 @@ const reverseList = function (head) {
     while (cur !== null) {
       let nextNode = cur.next;
       cur.next = prev;
+      prev = cur;
       cur = nextNode;
     }
     return prev;
@@ -27,4 +28,4 @@ const N3 = new LinkedListNode(3);
 N2.next = N3;
 
 reverseList(N1);
-console.log(N3.data, N3.next.data, N2.next.data);
+console.log(N3.data, N3.next.data, N3.next.next.data);
